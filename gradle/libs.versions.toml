@@ -12,6 +12,7 @@ bundles = {}
 	liquibase = "4.26.0"
 	json-web-token = "0.12.5"
 	git-properties = "2.4.1"
+	springdoc-openapi-starter-webmvc = "2.3.0"
 	assertj = "3.25.3"
 	spring-boot = "3.2.2"
 	commons-lang3 = "3.14.0"
@@ -84,6 +85,12 @@ bundles = {}
 	[libraries.spring-boot-starter-actuator]
 		name = "spring-boot-starter-actuator"
 		group = "org.springframework.boot"
+	[libraries.springdoc-openapi-starter-webmvc-api]
+		name = "springdoc-openapi-starter-webmvc-api"
+		group = "org.springdoc"
+
+		[libraries.springdoc-openapi-starter-webmvc-api.version]
+			ref = "springdoc-openapi-starter-webmvc"
 	[libraries.hikariCP]
 		name = "HikariCP"
 		group = "com.zaxxer"
@@ -93,6 +100,12 @@ bundles = {}
 
 		[libraries.jjwt-api.version]
 			ref = "json-web-token"
+	[libraries.springdoc-openapi-starter-webmvc-ui]
+		name = "springdoc-openapi-starter-webmvc-ui"
+		group = "org.springdoc"
+
+		[libraries.springdoc-openapi-starter-webmvc-ui.version]
+			ref = "springdoc-openapi-starter-webmvc"
 	[libraries.spring-boot-starter]
 		name = "spring-boot-starter"
 		group = "org.springframework.boot"

@@ -117,6 +117,8 @@ dependencies {
   implementation(libs.jjwt.api)
   runtimeOnly(libs.jjwt.impl)
   runtimeOnly(libs.jjwt.jackson)
+  implementation(libs.springdoc.openapi.starter.webmvc.ui)
+  implementation(libs.springdoc.openapi.starter.webmvc.api)
   // jhipster-needle-gradle-dependencies
 
   testImplementation(libs.protobuf.java.util)

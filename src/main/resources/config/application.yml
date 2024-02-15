@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: Gradleapp
+  threads:
+    virtual:
+      enabled: true
+logging:
+  level:
+    tech:
+      jhipster:
+        gradleapp: INFO

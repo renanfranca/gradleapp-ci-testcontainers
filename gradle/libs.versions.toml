@@ -6,6 +6,7 @@ bundles = {}
 	protobuf-plugin = "0.9.4"
 	jacoco = "0.8.11"
 	assertj = "3.25.3"
+	spring-boot = "3.2.2"
 	commons-lang3 = "3.14.0"
 	mockito = "5.10.0"
 	checkstyle = "10.13.0"
@@ -22,13 +23,18 @@ bundles = {}
 
 		[plugins.jib.version]
 			ref = "jib"
-[libraries]
-	[libraries.junit-params]
-		name = "junit-jupiter-params"
-		group = "org.junit.jupiter"
+	[plugins.spring-boot]
+		id = "org.springframework.boot"
 
-		[libraries.junit-params.version]
-			ref = "junit-jupiter"
+		[plugins.spring-boot.version]
+			ref = "spring-boot"
+[libraries]
+	[libraries.spring-boot-starter]
+		name = "spring-boot-starter"
+		group = "org.springframework.boot"
+	[libraries.spring-boot-starter-test]
+		name = "spring-boot-starter-test"
+		group = "org.springframework.boot"
 	[libraries.protobuf-java]
 		name = "protobuf-java"
 		group = "com.google.protobuf"
@@ -41,27 +47,15 @@ bundles = {}
 
 		[libraries.protobuf-java-util.version]
 			ref = "protobuf"
-	[libraries.assertj]
-		name = "assertj-core"
-		group = "org.assertj"
+	[libraries.spring-boot-dependencies]
+		name = "spring-boot-dependencies"
+		group = "org.springframework.boot"
 
-		[libraries.assertj.version]
-			ref = "assertj"
+		[libraries.spring-boot-dependencies.version]
+			ref = "spring-boot"
+	[libraries.spring-boot-configuration-processor]
+		name = "spring-boot-configuration-processor"
+		group = "org.springframework.boot"
 	[libraries.commons-lang3]
 		name = "commons-lang3"
 		group = "org.apache.commons"
-
-		[libraries.commons-lang3.version]
-			ref = "commons-lang3"
-	[libraries.junit-engine]
-		name = "junit-jupiter-engine"
-		group = "org.junit.jupiter"
-
-		[libraries.junit-engine.version]
-			ref = "junit-jupiter"
-	[libraries.mockito]
-		name = "mockito-junit-jupiter"
-		group = "org.mockito"
-
-		[libraries.mockito.version]
-			ref = "mockito"

@@ -1,0 +1,9 @@
+logging:
+  level:
+    tech:
+      jhipster:
+        gradleapp: 'OFF'
+  config: classpath:logback.xml
+spring:
+  main:
+    banner-mode: 'off'

@@ -4,6 +4,7 @@ plugins {
   checkstyle
   alias(libs.plugins.jib)
   alias(libs.plugins.protobuf)
+  alias(libs.plugins.spring.boot)
   // jhipster-needle-gradle-plugins
 }
 
@@ -70,6 +71,13 @@ protobuf {
   }
 }
 
+
+defaultTasks "bootRun"
+
+springBoot {
+  mainClass = "tech.jhipster.gradleapp.GradleappApp"
+}
+
 // jhipster-needle-gradle-plugins-configurations
 
 repositories {
@@ -87,12 +95,13 @@ ext {
 dependencies {
   implementation(libs.protobuf.java)
   implementation(libs.commons.lang3)
+  implementation(platform(libs.spring.boot.dependencies))
+  implementation(libs.spring.boot.starter)
+  implementation(libs.spring.boot.configuration.processor)
   // jhipster-needle-gradle-dependencies
-  testImplementation(libs.junit.engine)
-  testImplementation(libs.junit.params)
-  testImplementation(libs.assertj)
-  testImplementation(libs.mockito)
+
   testImplementation(libs.protobuf.java.util)
+  testImplementation(libs.spring.boot.starter.test)
   // jhipster-needle-gradle-test-dependencies
 }
 

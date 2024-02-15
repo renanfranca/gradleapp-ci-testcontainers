@@ -86,6 +86,7 @@ ext {
 
 dependencies {
   implementation(libs.protobuf.java)
+  implementation(libs.commons.lang3)
   // jhipster-needle-gradle-dependencies
   testImplementation(libs.junit.engine)
   testImplementation(libs.junit.params)

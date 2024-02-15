@@ -6,6 +6,7 @@ bundles = {}
 	protobuf-plugin = "0.9.4"
 	jacoco = "0.8.11"
 	assertj = "3.25.3"
+	commons-lang3 = "3.14.0"
 	mockito = "5.10.0"
 	checkstyle = "10.13.0"
 	os-maven-plugin = "1.7.1"
@@ -46,6 +47,12 @@ bundles = {}
 
 		[libraries.assertj.version]
 			ref = "assertj"
+	[libraries.commons-lang3]
+		name = "commons-lang3"
+		group = "org.apache.commons"
+
+		[libraries.commons-lang3.version]
+			ref = "commons-lang3"
 	[libraries.junit-engine]
 		name = "junit-jupiter-engine"
 		group = "org.junit.jupiter"

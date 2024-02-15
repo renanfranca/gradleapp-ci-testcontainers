@@ -3,6 +3,7 @@ plugins {
   jacoco
   checkstyle
   alias(libs.plugins.jib)
+  alias(libs.plugins.protobuf)
   // jhipster-needle-gradle-plugins
 }
 
@@ -62,6 +63,13 @@ jib {
     permissions = mapOf("/entrypoint.sh" to "755")
   }
 }
+
+protobuf {
+  protoc {
+    artifact = "com.google.protobuf:protoc:${libs.versions.protobuf.asProvider().get()}"
+  }
+}
+
 // jhipster-needle-gradle-plugins-configurations
 
 repositories {
@@ -77,11 +85,13 @@ ext {
 }
 
 dependencies {
+  implementation(libs.protobuf.java)
   // jhipster-needle-gradle-dependencies
   testImplementation(libs.junit.engine)
   testImplementation(libs.junit.params)
   testImplementation(libs.assertj)
   testImplementation(libs.mockito)
+  testImplementation(libs.protobuf.java.util)
   // jhipster-needle-gradle-test-dependencies
 }
 

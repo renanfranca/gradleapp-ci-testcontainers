@@ -1,13 +1,21 @@
 bundles = {}
 
 [versions]
+	protobuf = "3.25.2"
 	jib = "3.4.0"
+	protobuf-plugin = "0.9.4"
 	jacoco = "0.8.11"
 	assertj = "3.25.3"
 	mockito = "5.10.0"
 	checkstyle = "10.13.0"
+	os-maven-plugin = "1.7.1"
 	junit-jupiter = "5.10.2"
 [plugins]
+	[plugins.protobuf]
+		id = "com.google.protobuf"
+
+		[plugins.protobuf.version]
+			ref = "protobuf-plugin"
 	[plugins.jib]
 		id = "com.google.cloud.tools.jib"
 
@@ -20,6 +28,18 @@ bundles = {}
 
 		[libraries.junit-params.version]
 			ref = "junit-jupiter"
+	[libraries.protobuf-java]
+		name = "protobuf-java"
+		group = "com.google.protobuf"
+
+		[libraries.protobuf-java.version]
+			ref = "protobuf"
+	[libraries.protobuf-java-util]
+		name = "protobuf-java-util"
+		group = "com.google.protobuf"
+
+		[libraries.protobuf-java-util.version]
+			ref = "protobuf"
 	[libraries.assertj]
 		name = "assertj-core"
 		group = "org.assertj"

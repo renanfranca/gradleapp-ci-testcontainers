@@ -7,5 +7,12 @@ logging:
 spring:
   main:
     banner-mode: 'off'
+  datasource:
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    username: gradleapp
+    hikari:
+      maximum-pool-size: 2
+    url: jdbc:tc:postgresql:16.1:///gradleapp?TC_TMPFS=/testtmpfs:rw
+    password: ''
 server:
   port: 0

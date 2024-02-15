@@ -164,3 +164,9 @@ bundles = {}
 
 		[libraries.cucumber-spring.version]
 			ref = "cucumber"
+  [libraries.testcontainers-postgresql]
+    name = "postgresql"
+    group = "org.testcontainers"
+
+    [libraries.testcontainers-postgresql.version]
+      ref = "testcontainers"

@@ -131,6 +131,7 @@ dependencies {
   testImplementation(libs.cucumber.java)
   testImplementation(libs.cucumber.spring)
   testImplementation(libs.junit.platform.suite)
+  testImplementation(libs.testcontainers.postgresql)
   // jhipster-needle-gradle-test-dependencies
 }
 

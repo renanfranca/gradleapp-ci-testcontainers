@@ -6,12 +6,13 @@ bundles = {}
 	protobuf-plugin = "0.9.4"
 	reflections = "0.10.2"
 	jacoco = "0.8.11"
+	mockito = "5.10.0"
+	os-maven-plugin = "1.7.1"
+	git-properties = "2.4.1"
 	assertj = "3.25.3"
 	spring-boot = "3.2.2"
 	commons-lang3 = "3.14.0"
-	mockito = "5.10.0"
 	checkstyle = "10.13.0"
-	os-maven-plugin = "1.7.1"
 	junit-jupiter = "5.10.2"
 [plugins]
 	[plugins.protobuf]
@@ -24,6 +25,11 @@ bundles = {}
 
 		[plugins.jib.version]
 			ref = "jib"
+	[plugins.git-properties]
+		id = "com.gorylenko.gradle-git-properties"
+
+		[plugins.git-properties.version]
+			ref = "git-properties"
 	[plugins.spring-boot]
 		id = "org.springframework.boot"
 

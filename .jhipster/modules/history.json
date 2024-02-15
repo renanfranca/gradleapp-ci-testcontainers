@@ -167,5 +167,17 @@
       "date" : "2021-12-03T10:15:30.00Z",
       "configurationFormat" : "yml"
     }
+  }, {
+    "module" : "git-information",
+    "date" : "2024-02-15T15:59:33.762482046Z",
+    "properties" : {
+      "projectName" : "Chips Project",
+      "serverPort" : 8081,
+      "baseName" : "gradleapp",
+      "packageName" : "tech.jhipster.gradleapp",
+      "jwtBase64Secret" : "NmE2NDhmMmQ5OWQzYzk4NmE4NjNlMmQzNmU3ZTU4ZDY2MmUxOWEwZGI4YTk4NDY0MTk4MmQyMWZlNDNlM2FjYg==",
+      "date" : "2021-12-03T10:15:30.00Z",
+      "configurationFormat" : "yml"
+    }
   } ]
 }

@@ -113,6 +113,10 @@ dependencies {
   implementation(libs.hibernate.core)
   runtimeOnly(libs.postgresql)
   implementation(libs.liquibase.core)
+  implementation(libs.spring.boot.starter.security)
+  implementation(libs.jjwt.api)
+  runtimeOnly(libs.jjwt.impl)
+  runtimeOnly(libs.jjwt.jackson)
   // jhipster-needle-gradle-dependencies
 
   testImplementation(libs.protobuf.java.util)
@@ -120,6 +124,7 @@ dependencies {
   testImplementation(libs.reflections)
   testImplementation(libs.postgresql)
   testImplementation(libs.h2)
+  testImplementation(libs.spring.security.test)
   // jhipster-needle-gradle-test-dependencies
 }
 

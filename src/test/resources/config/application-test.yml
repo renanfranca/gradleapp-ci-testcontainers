@@ -16,3 +16,6 @@ spring:
     password: ''
 server:
   port: 0
+application:
+  security:
+    jwt-base64-secret: NmE2NDhmMmQ5OWQzYzk4NmE4NjNlMmQzNmU3ZTU4ZDY2MmUxOWEwZGI4YTk4NDY0MTk4MmQyMWZlNDNlM2FjYg==

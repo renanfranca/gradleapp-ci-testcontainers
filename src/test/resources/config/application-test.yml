@@ -14,8 +14,19 @@ spring:
       maximum-pool-size: 2
     url: jdbc:tc:postgresql:16.1:///gradleapp?TC_TMPFS=/testtmpfs:rw
     password: ''
+  security:
+    user:
+      roles: ADMIN
+      name: admin
+      password: $2a$12$cRKS9ZURbdJIaRsKDTDUmOrH4.B.2rokv8rrkrQXr2IR2Hkna484O
 server:
   port: 0
 application:
   security:
     jwt-base64-secret: NmE2NDhmMmQ5OWQzYzk4NmE4NjNlMmQzNmU3ZTU4ZDY2MmUxOWEwZGI4YTk4NDY0MTk4MmQyMWZlNDNlM2FjYg==
+    remember-me-token-validity: P365D
+    token-validity: P1D
+    content-security-policy: 'default-src ''self''; frame-src ''self'' data:; script-src
+      ''self'' ''unsafe-inline'' ''unsafe-eval'' https://storage.googleapis.com; style-src
+      ''self'' ''unsafe-inline'' https://fonts.googleapis.com; img-src ''self'' data:;
+      font-src ''self'' data: https://fonts.gstatic.com;'

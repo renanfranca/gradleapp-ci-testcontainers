@@ -38,5 +38,6 @@ docker compose -f src/main/docker/postgresql.yml up -d
 - [Logs Spy](documentation/logs-spy.md)
 - [CORS configuration](documentation/cors-configuration.md)
 - [Postgresql](documentation/postgresql.md)
+- [JWT basic auth](documentation/jwt-basic-auth.md)
 
 <!-- jhipster-needle-documentation -->

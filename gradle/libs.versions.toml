@@ -1,12 +1,18 @@
-plugins = {}
 bundles = {}
 
 [versions]
+	jib = "3.4.0"
 	jacoco = "0.8.11"
 	assertj = "3.25.3"
 	mockito = "5.10.0"
 	checkstyle = "10.13.0"
 	junit-jupiter = "5.10.2"
+[plugins]
+	[plugins.jib]
+		id = "com.google.cloud.tools.jib"
+
+		[plugins.jib.version]
+			ref = "jib"
 [libraries]
 	[libraries.junit-params]
 		name = "junit-jupiter-params"

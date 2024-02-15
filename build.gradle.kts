@@ -2,6 +2,7 @@ plugins {
   java
   jacoco
   checkstyle
+  alias(libs.plugins.jib)
   // jhipster-needle-gradle-plugins
 }
 
@@ -28,6 +29,39 @@ configurations.checkstyle {
   }
 }
 
+
+jib {
+  from {
+    image = "eclipse-temurin:21-jre-jammy"
+    platforms {
+      platform {
+        architecture = "amd64"
+        os = "linux"
+      }
+    }
+  }
+  to {
+    image = "gradleapp:latest"
+  }
+  container {
+    entrypoint = listOf("bash", "-c", "/entrypoint.sh")
+    ports = listOf("8081")
+    environment = mapOf(
+     "SPRING_OUTPUT_ANSI_ENABLED" to "ALWAYS",
+     "JHIPSTER_SLEEP" to "0"
+    )
+    creationTime = "USE_CURRENT_TIMESTAMP"
+    user = "1000"
+  }
+  extraDirectories {
+    paths {
+      path {
+        setFrom("src/main/docker/jib")
+      }
+    }
+    permissions = mapOf("/entrypoint.sh" to "755")
+  }
+}
 // jhipster-needle-gradle-plugins-configurations
 
 repositories {

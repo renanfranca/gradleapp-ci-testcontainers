@@ -37,6 +37,8 @@ spring:
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
         physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
     open-in-view: false
+  liquibase:
+    change-log: classpath:config/liquibase/master.xml
 logging:
   level:
     tech:

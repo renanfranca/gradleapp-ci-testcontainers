@@ -72,3 +72,6 @@ bundles = {}
 	[libraries.commons-lang3]
 		name = "commons-lang3"
 		group = "org.apache.commons"
+	[libraries.spring-boot-starter-actuator]
+		name = "spring-boot-starter-actuator"
+		group = "org.springframework.boot"

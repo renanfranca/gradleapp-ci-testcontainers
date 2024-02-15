@@ -98,10 +98,13 @@ dependencies {
   implementation(platform(libs.spring.boot.dependencies))
   implementation(libs.spring.boot.starter)
   implementation(libs.spring.boot.configuration.processor)
+  implementation(libs.spring.boot.starter.validation)
+  implementation(libs.spring.boot.starter.web)
   // jhipster-needle-gradle-dependencies
 
   testImplementation(libs.protobuf.java.util)
   testImplementation(libs.spring.boot.starter.test)
+  testImplementation(libs.reflections)
   // jhipster-needle-gradle-test-dependencies
 }
 

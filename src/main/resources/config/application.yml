@@ -9,3 +9,5 @@ logging:
     tech:
       jhipster:
         gradleapp: INFO
+server:
+  port: 8081
